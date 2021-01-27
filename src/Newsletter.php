@@ -40,7 +40,7 @@ class Newsletter
     {
         $options = array_merge($options, ['status' => 'pending']);
 
-        return $this->subscribe($email, $mergeFields, $listName, $options, $timeout);
+        return $this->subscribe($email, $mergeFields, $listName, $options);
     }
 
     public function subscribeOrUpdate(string $email, array $mergeFields = [], string $listName = '', array $options = [], $timeout = self::TIMEOUT)
@@ -98,7 +98,7 @@ class Newsletter
     {
         $response = $this->getMember($email, $listName, $timeout);
 
-        if (! isset($response)) {
+        if (! $this->lastActionSucceeded()) {
             return false;
         }
 
@@ -250,7 +250,7 @@ class Newsletter
     }
 
     /**
-     * @return array|false
+     * @return string|false
      */
     public function getLastError()
     {

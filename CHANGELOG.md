@@ -2,8 +2,26 @@
 
 All notable changes to `laravel-newsletter` will be documented in this file.
 
+## 4.9.0 - 2020-11-25
+
+- add support for PHP 8.0 (#253)
+- drop support for Laravel 5.8 (#253)
+
+## 4.8.2 - 2020-09-30
+
+- ensure the last action succeeded on `isSubscribed` (#244)
+
+## 4.8.1 - 2020-09-09
+
+- Add support for Laravel 8
+
+## 4.8.0 - 2020-03-03
+
+- add support for laravel 7
+
 ## 4.7.1 - 2019-09-16
-- Changed: Updated Laravel 6 compatibility for future versions
+
+- add support for laravel 6
 
 ## 4.7.0 - 2019-09-13
 - Added: Ability to permanently delete list members
