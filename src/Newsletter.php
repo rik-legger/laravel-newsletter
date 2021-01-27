@@ -194,7 +194,8 @@ class Newsletter
         string $listName = '',
         array $options = [],
         array $contentOptions = [],
-        $timeout = self::TIMEOUT)
+        $timeout = self::TIMEOUT
+    )
     {
         $list = $this->lists->findByName($listName);
 
